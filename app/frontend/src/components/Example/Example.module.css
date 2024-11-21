@@ -11,7 +11,7 @@
 
 .example {
     word-break: break-word;
-    background: #dbdbdb;
+    background: #00A050;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -32,6 +32,7 @@
     width: 25rem;
     padding: 0.5rem;
     min-height: 4.5rem;
+    color: #ffffff;
 }
 
 .examplesNavList li {

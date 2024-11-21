@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
+    max-height: calc(100vh - 3.75rem);
 }
 
 .chatRoot {
@@ -34,6 +35,15 @@
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 1.875rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(10, 60, 64);
+    color: #ffffff;
+    height: 3.75rem;
 }
 
 .chatEmptyStateSubtitle {
@@ -71,7 +81,6 @@
     padding: 1rem;
     width: 100%;
     max-width: 64.25rem;
-    background: #f2f2f2;
 }
 
 .chatAnalysisPanel {

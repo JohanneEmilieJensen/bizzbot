@@ -37,6 +37,8 @@ import { LoginContext } from "../../loginContext";
 import { LanguagePicker } from "../../i18n/LanguagePicker";
 import { Settings } from "../../components/Settings/Settings";
 
+import logo from "../../assets/logo.png";
+
 const Chat = () => {
     const [isConfigPanelOpen, setIsConfigPanelOpen] = useState(false);
     const [isHistoryPanelOpen, setIsHistoryPanelOpen] = useState(false);
@@ -354,24 +356,10 @@ const Chat = () => {
             <Helmet>
                 <title>{t("pageTitle")}</title>
             </Helmet>
-            <div className={styles.commandsSplitContainer}>
-                <div className={styles.commandsContainer}>
-                    {((useLogin && showChatHistoryCosmos) || showChatHistoryBrowser) && (
-                        <HistoryButton className={styles.commandButton} onClick={() => setIsHistoryPanelOpen(!isHistoryPanelOpen)} />
-                    )}
-                </div>
-                <div className={styles.commandsContainer}>
-                    <ClearChatButton className={styles.commandButton} onClick={clearChat} disabled={!lastQuestionRef.current || isLoading} />
-                    {showUserUpload && <UploadFile className={styles.commandButton} disabled={!loggedIn} />}
-                    <SettingsButton className={styles.commandButton} onClick={() => setIsConfigPanelOpen(!isConfigPanelOpen)} />
-                </div>
-            </div>
             <div className={styles.chatRoot} style={{ marginLeft: isHistoryPanelOpen ? "300px" : "0" }}>
                 <div className={styles.chatContainer}>
                     {!lastQuestionRef.current ? (
                         <div className={styles.chatEmptyState}>
-                            <SparkleFilled fontSize={"120px"} primaryFill={"rgba(115, 118, 225, 1)"} aria-hidden="true" aria-label="Chat logo" />
-                            <h1 className={styles.chatEmptyStateTitle}>{t("chatEmptyStateTitle")}</h1>
                             <h2 className={styles.chatEmptyStateSubtitle}>{t("chatEmptyStateSubtitle")}</h2>
                             {showLanguagePicker && <LanguagePicker onLanguageChange={newLang => i18n.changeLanguage(newLang)} />}
 
@@ -521,6 +509,10 @@ const Chat = () => {
                     {useLogin && <TokenClaimsDisplay />}
                 </Panel>
             </div>
+            <footer className={styles.footer}>
+                <div><img src={logo} alt="logo" className={styles.logo} />
+                </div>
+            </footer>
         </div>
     );
 };
