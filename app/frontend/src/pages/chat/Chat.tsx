@@ -510,7 +510,22 @@ const Chat = () => {
                 </Panel>
             </div>
             <footer className={styles.footer}>
-                <div><img src={logo} alt="logo" className={styles.logo} />
+                <div className={styles.footerColumn}>
+                    <img src={logo} alt="logo" className={styles.footerLogo} />
+                </div>
+                <div className={styles.footerColumn}>
+                    <ul>
+                        <li>Om Brobizz</li>
+                        <li>Ledige jobs</li>
+                    </ul>
+                </div>
+                <div className={styles.footerColumn}></div>
+                <div className={styles.footerColumn}>
+                    <ul>
+                        <li>Cookiepolitik</li>
+                        <li>Privatlivspolitik</li>
+                        <li>Betingelser privat</li>
+                    </ul>
                 </div>
             </footer>
         </div>

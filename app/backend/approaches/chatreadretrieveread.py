@@ -65,7 +65,8 @@ class ChatReadRetrieveReadApproach(ChatApproach):
         Hver kilde har et navn efterfulgt af kolon og den faktiske information, altid inkluder kildenavnet for hver fakta du bruger i dit svar. Brug firkantede klammer 
         til at referere til kilden, for eksempel: [info1.txt]. Kombiner ikke kilder, list hver kilde separat, for eksempel: [info1.txt][info2.pdf].
         Spørg om kunden vil videresendes til en medarbejder efter tre spørgsmål og svar. Mellem 9-15 i hverdagene kan man viderestilles til en medarbejder i chatten, men udenfor dette tidsrum kan man kontakte en medarbejder på følgende link
-        link: https://brobizz.com/kontakt/privat. Hvis man ønsker at snakke med en medarbejder fra Brobizz på telefon kan de kontaktes på telefonnummer 70207049.
+        link: https://brobizz.com/kontakt/privat. Hvis man ønsker at snakke med en medarbejder fra Brobizz på telefon kan de kontaktes på telefonnummer 70207049. Du skal ikke give kontaktinformation medmindre der bliver spurgt om det. \
+        Du skal gøre dit bedste for at hjælpe kunden med at svare på deres spørgsmål.
         {follow_up_questions_prompt}
         {injected_prompt}
         """
